@@ -2,7 +2,7 @@ package com.example.appsoma.entities;
 
 import java.io.Serializable;
 
-public class Operacoes implements Serializable {
+public class OperacoesSolib implements Serializable {
 
     private double pesoCapsula;
     private double pesoCapsulaSoloUmido;
@@ -12,7 +12,7 @@ public class Operacoes implements Serializable {
     private double umidade;
     private double fatorConversao;
 
-    public Operacoes(double pesoCapsula, double pesoCapsulaSoloUmido, double pesoCapsulaSoloSeco, double pesoAguaMa, double pesoSoloSecoMs, double umidade, double fatorConversao){
+    public OperacoesSolib(double pesoCapsula, double pesoCapsulaSoloUmido, double pesoCapsulaSoloSeco, double pesoAguaMa, double pesoSoloSecoMs, double umidade, double fatorConversao){
         this.pesoCapsula = pesoCapsula;
         this.pesoCapsulaSoloUmido = pesoCapsulaSoloUmido;
         this.pesoCapsulaSoloSeco = pesoCapsulaSoloSeco;

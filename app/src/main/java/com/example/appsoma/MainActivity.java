@@ -6,12 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.appsoma.entities.Operacoes;
+import com.example.appsoma.entities.OperacoesSolib;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     public static final long TEMPO_ESPERA = 2000;
     //TextView textView;
@@ -19,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
     EditText textCapsulaSoloUmido;
     EditText textCapsulaSoloSeco;
 
-    @Override
+    EditText textPesoCilindroSoloUmido;
+    Spinner spinnerDetermincao;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -43,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }, TEMPO_ESPERA);
     }
-    public void determinacaoUmidadeCampo(View view){
+
+
+    public void calcularUmidadeCampo(View view){
 
         double pesoCapsula = Double.parseDouble(this.textPesoCapsula.getText().toString());
         double pesoCapsulaSoloUmido = Double.parseDouble(this.textCapsulaSoloUmido.getText().toString());
@@ -59,13 +66,14 @@ public class MainActivity extends AppCompatActivity {
         umidade = 100 * pesoAguaMa / pesoSoloSecoMs;
         fatorConversao = 100 / (100 + umidade);
 
-        Operacoes operacoes = new Operacoes(pesoCapsula, pesoCapsulaSoloUmido, pesoCapsulaSoloSeco, pesoAguaMa,  pesoSoloSecoMs, umidade, fatorConversao);
+        OperacoesSolib operacoesSolib = new OperacoesSolib(pesoCapsula, pesoCapsulaSoloUmido, pesoCapsulaSoloSeco, pesoAguaMa,  pesoSoloSecoMs, umidade, fatorConversao);
 
         Intent it = new Intent(this, ResultActivity.class);
-        it.putExtra("operacoes", operacoes);
+        it.putExtra("operacoes", operacoesSolib);
         startActivity(it);
 
         Toast toast = Toast.makeText(this, "Determinação executado com sucesso", Toast.LENGTH_SHORT );
         toast.show();
     }
 }
+

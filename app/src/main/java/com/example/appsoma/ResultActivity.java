@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.appsoma.entities.Operacoes;
+import com.example.appsoma.entities.OperacoesSolib;
 
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 
 public class ResultActivity extends AppCompatActivity {
     TextView textPesoCapsula, textCapsulaSoloUmido,
@@ -21,7 +20,7 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         Bundle bundle = getIntent().getExtras();
-        Operacoes operacoes = (Operacoes) bundle.getSerializable("operacoes");
+        OperacoesSolib operacoesSolib = (OperacoesSolib) bundle.getSerializable("operacoes");
 
         DecimalFormat df = new DecimalFormat("0.00");
 
@@ -33,12 +32,12 @@ public class ResultActivity extends AppCompatActivity {
         this.textH = findViewById(R.id.textH);
         this.textFC = findViewById(R.id.textFC);
 
-        this.textPesoCapsula.setText(df.format(operacoes.getPesoCapsula()));
-        this.textCapsulaSoloUmido.setText(df.format(operacoes.getPesoCapsulaSoloUmido()));
-        this.textCapsulaSoloSeco.setText(df.format(operacoes.getPesoCapsulaSoloSeco()));
-        this.textMa.setText(df.format(operacoes.getPesoAguaMa()));
-        this.textMs.setText(df.format(operacoes.getPesoSoloSecoMs()));
-        this.textH.setText(df.format(operacoes.getUmidade()));
-        this.textFC.setText(df.format(operacoes.getFatorConversao()));
+        this.textPesoCapsula.setText(df.format(operacoesSolib.getPesoCapsula()));
+        this.textCapsulaSoloUmido.setText(df.format(operacoesSolib.getPesoCapsulaSoloUmido()));
+        this.textCapsulaSoloSeco.setText(df.format(operacoesSolib.getPesoCapsulaSoloSeco()));
+        this.textMa.setText(df.format(operacoesSolib.getPesoAguaMa()));
+        this.textMs.setText(df.format(operacoesSolib.getPesoSoloSecoMs()));
+        this.textH.setText(df.format(operacoesSolib.getUmidade()));
+        this.textFC.setText(df.format(operacoesSolib.getFatorConversao()));
     }
 }

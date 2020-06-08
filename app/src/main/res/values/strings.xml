@@ -3,4 +3,14 @@
     <string name="hint">Peso da capsula</string>
     <string name="hint2">Capsula com solo umido</string>
     <string name="hint3">Capsula com solo seco</string>
+    <string name="hint4">Peso do cilindro com solo úmido</string>
+    <string name="hint5">Peso inicial do frasco</string>
+    <string name="hint6">Peso final do frasco</string>
+    <string name="hint7">Peso areia funil</string>
+    <string name="hint8">Peso úmido</string>
+    <string name="solmef">Solmef</string>
+
+    <string-array name="lista_determinacao">
+        <item>SCC.064</item>
+    </string-array>
 </resources>
