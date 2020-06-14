@@ -32,56 +32,48 @@
         app:layout_constraintTop_toBottomOf="@+id/txtDensidadeSeca">
 
         <TextView
-            android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Peso da capsula"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtDiferenca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cápsula com solo úmido"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtPesoAreiaFunil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cápsula com solo seco"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtPesoFinal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Peso da água"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtDensidadeAparenteAreia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Solo seco"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtVolumeFuro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Umidade"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtPesoSoloUmido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Speedy"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtDensidadeUmida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fator de conversão"
@@ -100,37 +92,37 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textPesoCapsula"
+            android:id="@+id/editPesoCapsula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textCapsulaSoloUmido"
+            android:id="@+id/editCapsulaSoloUmido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textCapsulaSoloSeco"
+            android:id="@+id/editCapsulaSoloSeco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textMa"
+            android:id="@+id/textPesoAgua"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textMs"
+            android:id="@+id/textSoloSeco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textH"
+            android:id="@+id/textUmidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
@@ -142,7 +134,128 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textFC"
+            android:id="@+id/textFatorConversao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDensidadeSeca3"
+        android:layout_width="347dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:text="DENSIDADE &quot;IN SITU' MÉTODO DO CILINDRO BISELADO"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="250dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txtDensidadeSeca3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Determinação Nº"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volume do Cilindro"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso Cilindro"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso Cilindro com Solo Úmido"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solo Úmido"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desnsidade Úmida"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Densidade Seca"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="135dp"
+        android:layout_height="178dp"
+        android:layout_marginBottom="88dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSolib"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout5">
+
+        <TextView
+            android:id="@+id/textDeterminacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textVolumeCilindro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textPesoCilindro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textPesoCilindroSoloUmido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textSoloUmido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textDensidadeUmida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textDensidadeSeca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />

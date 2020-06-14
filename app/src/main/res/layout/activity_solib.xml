@@ -10,22 +10,50 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="235dp"
-        android:layout_height="52dp"
+        android:layout_width="250dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="88dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintStart_toStartOf="@+id/spinnerDeterminacao"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
+        app:layout_constraintBottom_toTopOf="@+id/buttonSolib"
+        app:layout_constraintStart_toStartOf="@+id/spinnerDeterminacao">
 
         <TextView
-            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Determinação Nº"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volume do Cilindro"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso Cilindro"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso Cilindro com Solo Úmido"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solo Úmido"
+            android:textSize="18sp" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Desnsidade Úmida"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Densidade Seca"
@@ -35,25 +63,60 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="88dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="117dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="88dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSolib"
         app:layout_constraintEnd_toEndOf="@+id/spinnerDeterminacao"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerDeterminacao">
+        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout5">
+
+        <TextView
+            android:id="@+id/textDeterminacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textVolumeCilindro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textPesoCilindro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textPesoCilindroSoloUmido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textSoloUmido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textDensidadeUmida"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textDensidadeSeca"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
+
     </LinearLayout>
+
 
     <Spinner
         android:id="@+id/spinnerDeterminacao"
@@ -62,54 +125,56 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textpesoCilindroSoloUmido" />
+        app:layout_constraintTop_toBottomOf="@+id/editPesoCilindroSoloUmido"
+        app:layout_constraintVertical_bias="0.085" />
 
     <EditText
-        android:id="@+id/textpesoCilindroSoloUmido"
-        android:layout_width="343dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="60dp"
+        android:id="@+id/editPesoCilindroSoloUmido"
+        android:layout_width="365dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="120dp"
         android:ems="10"
         android:hint="@string/hint4"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDeterminacao" />
-
-    <TextView
-        android:id="@+id/textDeterminacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="90dp"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView15"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="40dp"
-        android:text="Determinação Nº:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerDeterminacao"
+        app:layout_constraintStart_toStartOf="@+id/spinnerDeterminacao"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSolib"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="172dp"
+        android:layout_width="388dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="69dp"
         android:text='CALCULAR DENSIDADE "IN SITU"'
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5" />
+
+    <TextView
+        android:layout_width="364dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:text='DENSIDADE "IN SITU" MÉTODO DO CILINDRO BISELADO'
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPesoCilindroSoloUmido"
+        app:layout_constraintEnd_toEndOf="@+id/editPesoCilindroSoloUmido"
+        app:layout_constraintStart_toStartOf="@+id/editPesoCilindroSoloUmido"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFatorConversao"
+        android:layout_width="144dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSolib" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

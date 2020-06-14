@@ -7,16 +7,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="404dp"
-        android:layout_height="256dp"
+        android:layout_width="384dp"
+        android:layout_height="217dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <EditText
-            android:id="@+id/textPesoInicialFrasco"
+            android:id="@+id/editPesoInicialFrasco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -24,7 +24,7 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/textPesoFinalFrasco"
+            android:id="@+id/editPesoFinalFrasco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -32,7 +32,7 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/textPesoAreiaFunil"
+            android:id="@+id/editPesoAreiaFunil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -40,33 +40,27 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/textPesoSoloUmido"
+            android:id="@+id/editPesoSoloUmido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint8"
             android:inputType="numberDecimal" />
 
-        <Button
-            android:id="@+id/buttonCalcularDensidade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="calcularDensidadeAparente"
-            android:text="CALCULAR DENSIDADE APARENTE" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="254dp"
         android:layout_height="251dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.13">
 
         <TextView
 
@@ -142,13 +136,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="78dp"
-        android:layout_height="249dp"
-        android:layout_marginEnd="28dp"
+        android:layout_width="127dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout6">
+        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout6"
+        app:layout_constraintVertical_bias="0.00999999">
 
         <TextView
             android:id="@+id/txtPesoInicialFrasco"
@@ -211,4 +208,30 @@
             android:textSize="18sp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCalcularDensidade"
+        android:layout_width="388dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="69dp"
+        android:onClick="calcularDensidadeAparente"
+        android:text="CALCULAR DENSIDADE APARENTE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="374dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:text="DENSIDADE APARENTE PROCESSO FUNIL"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
