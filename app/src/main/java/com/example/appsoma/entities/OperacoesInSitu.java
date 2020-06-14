@@ -1,7 +1,9 @@
 package com.example.appsoma.entities;
 
-public class OperacoesInSitu {
-   // private double determinacao; //scc 064
+import java.io.Serializable;
+
+public class OperacoesInSitu implements Serializable {
+    //private String [] determinacao; //scc 064
     private double volumeCilindro; //998;
     private double pesoCilindro;//997;
     private double pesoCilindroSoloUmido;
@@ -10,21 +12,29 @@ public class OperacoesInSitu {
     private double densidadeSeca;
 
 
-    public OperacoesInSitu(double volumeCilindro, double pesoCilindro, double pesoCilindroSoloUmido, double soloUmido, double densidadeUmida, double densidadeSeca) {
-       // this.determinacao = determinacao;
-        this.volumeCilindro = volumeCilindro;
-        this.pesoCilindro = pesoCilindro;
+    public OperacoesInSitu(
+
+                double volumeCilindro,
+                double pesoCilindro,
+                double pesoCilindroSoloUmido,
+                double soloUmido,
+                double densidadeUmida,
+                double densidadeSeca
+    ) {
+       // this.determinacao          = determinacao;
+        this.volumeCilindro        = volumeCilindro;
+        this.pesoCilindro          = pesoCilindro;
         this.pesoCilindroSoloUmido = pesoCilindroSoloUmido;
-        this.soloUmido = soloUmido;
-        this.densidadeUmida = densidadeUmida;
-        this.densidadeSeca = densidadeSeca;
+        this.soloUmido             = soloUmido;
+        this.densidadeUmida        = densidadeUmida;
+        this.densidadeSeca         = densidadeSeca;
     }
 
-   /* public double getDeterminacao() {
+   /*public String[] getDeterminacao() {
         return determinacao;
     }
 
-    public void setDeterminacao(double determinacao) {
+    public void setDeterminacao(String [] determinacao) {
         this.determinacao = determinacao;
     }*/
 

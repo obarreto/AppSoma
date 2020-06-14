@@ -1,6 +1,8 @@
 package com.example.appsoma.entities;
 
-public class OperacoesSolmef {
+import java.io.Serializable;
+
+public class OperacoesSolmef implements Serializable {
     private double pesoInicialFrasco;
     private double pesoFinalFrasco;
     private double diferenca;
@@ -12,7 +14,8 @@ public class OperacoesSolmef {
     private double densidadeUmida;
     private double densidadeSeca;
 
-    public OperacoesSolmef(double pesoInicialFrasco,
+    public OperacoesSolmef(
+                           double pesoInicialFrasco,
                            double pesoFinalFrasco,
                            double diferenca,
                            double pesoAreiaFunil,
@@ -21,18 +24,19 @@ public class OperacoesSolmef {
                            double volumeFuro,
                            double pesoSoloUmido,
                            double densidadeUmida,
-                           double densidadeSeca) {
+                           double densidadeSeca
+    ) {
 
-        this.pesoInicialFrasco = pesoInicialFrasco;
-        this.pesoFinalFrasco = pesoFinalFrasco;
-        this.diferenca = diferenca;
-        this.pesoAreiaFunil = pesoAreiaFunil;
-        this.pesoFinal = pesoFinal;
+        this.pesoInicialFrasco      = pesoInicialFrasco;
+        this.pesoFinalFrasco        = pesoFinalFrasco;
+        this.diferenca              = diferenca;
+        this.pesoAreiaFunil         = pesoAreiaFunil;
+        this.pesoFinal              = pesoFinal;
         this.densidadeAparenteAreia = densidadeAparenteAreia;
-        this.volumeFuro = volumeFuro;
-        this.pesoSoloUmido = pesoSoloUmido;
-        this.densidadeUmida = densidadeUmida;
-        this.densidadeSeca = densidadeSeca;
+        this.volumeFuro             = volumeFuro;
+        this.pesoSoloUmido          = pesoSoloUmido;
+        this.densidadeUmida         = densidadeUmida;
+        this.densidadeSeca          = densidadeSeca;
     }
 
     public double getPesoInicialFrasco() {

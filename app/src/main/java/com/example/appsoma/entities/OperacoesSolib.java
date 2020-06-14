@@ -12,14 +12,22 @@ public class OperacoesSolib implements Serializable {
     private double umidade;
     private double fatorConversao;
 
-    public OperacoesSolib(double pesoCapsula, double pesoCapsulaSoloUmido, double pesoCapsulaSoloSeco, double pesoAguaMa, double pesoSoloSecoMs, double umidade, double fatorConversao){
-        this.pesoCapsula = pesoCapsula;
+    public OperacoesSolib(
+                double pesoCapsula,
+                double pesoCapsulaSoloUmido,
+                double pesoCapsulaSoloSeco,
+                double pesoAguaMa,
+                double pesoSoloSecoMs,
+                double umidade,
+                double fatorConversao
+    ){
+        this.pesoCapsula          = pesoCapsula;
         this.pesoCapsulaSoloUmido = pesoCapsulaSoloUmido;
-        this.pesoCapsulaSoloSeco = pesoCapsulaSoloSeco;
-        this.pesoAguaMa = pesoAguaMa;
-        this.pesoSoloSecoMs = pesoSoloSecoMs;
-        this.umidade = umidade;
-        this.fatorConversao = fatorConversao;
+        this.pesoCapsulaSoloSeco  = pesoCapsulaSoloSeco;
+        this.pesoAguaMa           = pesoAguaMa;
+        this.pesoSoloSecoMs       = pesoSoloSecoMs;
+        this.umidade              = umidade;
+        this.fatorConversao       = fatorConversao;
     }
 
     public double getPesoCapsula() {
